@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  border: 1px solid red;
+}
+
+.face {
+  background-color: rgba(223, 212, 212, .3);
+  width: 570px;
+  height: 470px;
+  margin: 100px auto;
+  border-radius: 50%;
+  z-index: 1;
+  position: relative;
+}
+.brows-left,
+.brows-right {
+  background-color: black;
+  width: 100px;
+  height: 2px;
+  position: absolute;
+}
+.brows-left {
+  left: 20%;
+  top: 20%;
+}
+.brows-right {
+  right: 20%;
+  top: 20%;
+}
+.glasses-temple-left, 
+.glasses-temple-right,
+.glasses-temple-middle {
+  background-color: rgba(71, 59, 181, .7);
+  width: 120px;
+  height: 20px;
+  position: absolute;
+} 
+.glasses-temple-left {
+  left: 9%;
+  top: 25%;
+  transform: rotate(30deg);
+}
+.glasses-temple-right {
+  right: 9%;
+  top: 25%;
+  transform: rotate(-30deg);
+}
+.glasses-temple-middle {
+  left: 35%;
+  top: 32%;
+  transform: rotate(-180deg);
+}
+
+.glasses-left,
+.glasses-right {
+  background-image: url('../images/glasses-dotted.png');
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border: 5px solid rgb(9, 8, 8);
+  border-radius: 0 0 50% 50%;
+  /* transform: rotate(35deg); */
+}
+.glasses-left {
+  left: 25%;
+  top: 30%;
+}
+.glasses-right {
+  right: 25%;
+  top: 30%;
+}
+.nose {
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid transparent;
+  border-top: 50px solid black;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 41%;
+}
+.nose-between-mouse {
+  width: 2px;
+  height: 30px;
+  background-color: black;
+  position: absolute;
+  top: 57%;
+  left: 283px;
+}
+.mouse-left,
+.mouse-right {
+  width: 2px;
+  height: 35px;
+  background-color: black;
+  position: absolute;
+}
+.mouse-left {
+  transform: rotate(45deg);
+  top: 62%;
+  left: 271px;
+}
+.mouse-right {
+  transform: rotate(-45deg);
+  top: 62%;
+  left: 295px;
+}
+.whiskers {
+  width: 200px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+}
+.whiskers.left1 {
+  top: 62%;
+  left: -5%;
+  transform: rotate(-5deg);
+}
+.whiskers.left2 {
+  top: 72%;
+  left: -5%;
+  transform: rotate(-8deg);
+}
+.whiskers.right1 {
+  top: 62%;
+  right: -5%;
+  transform: rotate(5deg);
+}
+.whiskers.right2 {
+  top: 72%;
+  right: -5%;
+  transform: rotate(8deg);
+}
