@@ -1,26 +1,35 @@
+:root {
+  --face-width: 570px;
+  --face-height: 470px;
+}
+
 body {
   margin: 0;
-  background: rgb(63,94,251);
-background: linear-gradient(-35deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  height: 100vh;
+  background: linear-gradient(-45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
+
 
 .facebox {
   width: 700px;
-  height: 700px;
+  /* height: 700px; */
   position: relative;
   margin: 0 auto;
+  transition: all .5s;
+
 }
 
 .face {
   background-color: rgb(230, 241, 239);
-  width: 570px;
-  height: 470px;
+  width: var(--face-width);
+  height: var(--face-height);
   margin: 100px auto;
   border-radius: 50%;
   box-shadow:  30px 30px 28px rgba(0, 0, 0, 0.25),  0px 10px 10px rgba(0, 0, 0, 0.22);
   overflow: hidden;
   position: relative;
 }
+
 
 .stain {
   width: 350px;
@@ -50,43 +59,49 @@ background: linear-gradient(-35deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100
 
 /* glasess-temple */
 .glasses-temple {
-  background-color: #071952;
+  background-color: rgba(7, 25, 82, .8);
   width: 120px;
   height: 20px;
   position: absolute;
+  border-radius: 5px;
 } 
 .glasses-temple.left {
   left: 9%;
   top: 25%;
   transform: rotate(30deg);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 38px, rgba(0, 0, 0, 0.22) 0px 10px 12px;
 }
 .glasses-temple.right {
   right: 9%;
   top: 25%;
   transform: rotate(-30deg);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .glasses-temple.middle {
   left: 35%;
   top: 32%;
   transform: rotate(-180deg);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px -20px 38px, rgba(0, 0, 0, 0.22) 0px -15px 12px;
+
 }
 
 /* glasses */
 .glasses {
   background-image: url('../images/glasses-dotted.png');
-  width: 100px;
+  width: 115px;
   height: 100px;
   position: absolute;
   border: 5px solid rgb(9, 8, 8);
   border-radius: 0 0 50% 50%;
-  /* transform: rotate(35deg); */
+  box-shadow: rgba(0, 0, 0, 0.3) 15px 19px 50px, rgba(0, 0, 0, 0.22) 15px 15px 50px;
+  
 }
 .glasses.left {
-  left: 25%;
+  left: 23%;
   top: 30%;
 }
 .glasses.right {
-  right: 25%;
+  right: 23%;
   top: 30%;
 }
 
@@ -136,24 +151,25 @@ background: linear-gradient(-35deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100
   height: 1px;
   background-color: black;
   position: absolute;
+  transition: all 0.5s;
 }
 .whiskers.left1 {
-  top: 42%;
+  bottom: 43%;
   left: 5%;
-  transform: rotate(-5deg);
+  transform: rotate(13deg);
 }
 .whiskers.left2 {
-  top: 52%;
+  bottom: 25%;
   left: 5%;
-  transform: rotate(-8deg);
+  transform: rotate(339deg);
 }
 .whiskers.right1 {
-  top: 42%;
+  bottom: 38%;
   right: 5%;
   transform: rotate(5deg);
 }
 .whiskers.right2 {
-  top: 52%;
+  bottom: 28%;
   right: 5%;
   transform: rotate(8deg);
 }
@@ -163,17 +179,43 @@ background: linear-gradient(-35deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100
   width: 280px;
   height: 300px;
   background-color: rgb(223, 212, 212);
-  clip-path: polygon(54% 0, 73% 11%, 86% 30%, 100% 100%, 4% 80%, 18% 32%, 32% 11%);
+  clip-path: polygon(54% 0, 80% 11%, 86% 30%, 100% 100%, 4% 80%, 18% 32%, 32% 11%);
   position: absolute;
-
+  transition: all .5s;
 }
 .ear.left {
-  transform: rotate(-70deg);
-  /* transform: rotate(); */
-  left: 55%;
-}
-.ear.right {
   transform: rotate(195deg);
-  top: -7%;
+  top: 0%;
   left: 7%;
 }
+.ear.right {
+  transform: rotate(-70deg);
+  left: 55%;
+}
+
+.facebox:hover {
+  transform: scale(1.1);
+}
+.facebox:hover .ear.left {
+  transform: scale(1.05) rotate(175deg);
+}ß
+.facebox:hover .ear.right {
+  transform: scale(1.05) rotate(-90deg);
+}
+.facebox:hover .whiskers.left1 {
+  bottom: 37%;
+  transform: rotate(-5deg);
+}
+.facebox:hover .whiskers.left2 {
+  bottom: 26%;
+  transform: rotate(349deg);
+}
+/* 그리고 뒤에서 후광 효과처럼 화 하고 빛이 번진다.
+   이때 left 귀 모양은 right 처럼 내려가게 한다. left 수염도 right 처럼 슨다.
+   그리고 face와 glasses temple, glasses에 있는 shadow가 없어진다.
+
+   scale이 살짝 커진다.
+
+   body에 준 그라데이션 기울기를 돌려서 붉은 부분이 위로 오고 파란 부분이 아래로 오게 만든다.
+*/
+/* 고양이 얼굴에 손을 가져다 대면 말풍선과 함께 "같이 츄르 먹을래?" 가 뜬다. */
