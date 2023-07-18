@@ -1,58 +1,78 @@
 body {
   margin: 0;
-  border: 1px solid red;
+  background: rgb(63,94,251);
+background: linear-gradient(-35deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+.facebox {
+  width: 700px;
+  height: 700px;
+  position: relative;
+  margin: 0 auto;
 }
 
 .face {
-  background-color: rgba(223, 212, 212, .3);
+  background-color: rgb(230, 241, 239);
   width: 570px;
   height: 470px;
   margin: 100px auto;
   border-radius: 50%;
-  z-index: 1;
+  box-shadow:  30px 30px 28px rgba(0, 0, 0, 0.25),  0px 10px 10px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
   position: relative;
 }
-.brows-left,
-.brows-right {
+
+.stain {
+  width: 350px;
+  height: 250px;
+  background-color: burlywood;
+  position: absolute;
+  border-radius: 50%;
+  transform: rotate(-30deg);
+  box-shadow: 50px 30px 28px rgba(222, 184, 135, 0.25);
+}
+
+/* borws */
+.brows {
   background-color: black;
   width: 100px;
   height: 2px;
   position: absolute;
 }
-.brows-left {
+.brows.left {
   left: 20%;
   top: 20%;
 }
-.brows-right {
+.brows.right {
   right: 20%;
   top: 20%;
 }
-.glasses-temple-left, 
-.glasses-temple-right,
-.glasses-temple-middle {
-  background-color: rgba(71, 59, 181, .7);
+
+/* glasess-temple */
+.glasses-temple {
+  background-color: #071952;
   width: 120px;
   height: 20px;
   position: absolute;
 } 
-.glasses-temple-left {
+.glasses-temple.left {
   left: 9%;
   top: 25%;
   transform: rotate(30deg);
 }
-.glasses-temple-right {
+.glasses-temple.right {
   right: 9%;
   top: 25%;
   transform: rotate(-30deg);
 }
-.glasses-temple-middle {
+.glasses-temple.middle {
   left: 35%;
   top: 32%;
   transform: rotate(-180deg);
 }
 
-.glasses-left,
-.glasses-right {
+/* glasses */
+.glasses {
   background-image: url('../images/glasses-dotted.png');
   width: 100px;
   height: 100px;
@@ -61,14 +81,15 @@ body {
   border-radius: 0 0 50% 50%;
   /* transform: rotate(35deg); */
 }
-.glasses-left {
+.glasses.left {
   left: 25%;
   top: 30%;
 }
-.glasses-right {
+.glasses.right {
   right: 25%;
   top: 30%;
 }
+
 .nose {
   width: 0;
   height: 0;
@@ -81,6 +102,7 @@ body {
   top: 50%;
   left: 41%;
 }
+
 .nose-between-mouse {
   width: 2px;
   height: 30px;
@@ -89,23 +111,26 @@ body {
   top: 57%;
   left: 283px;
 }
-.mouse-left,
-.mouse-right {
+
+/* mouse */
+.mouse {
   width: 2px;
   height: 35px;
   background-color: black;
   position: absolute;
 }
-.mouse-left {
+.mouse.left {
   transform: rotate(45deg);
   top: 62%;
   left: 271px;
 }
-.mouse-right {
+.mouse.right {
   transform: rotate(-45deg);
   top: 62%;
   left: 295px;
 }
+
+/* whiskers */
 .whiskers {
   width: 200px;
   height: 1px;
@@ -113,22 +138,42 @@ body {
   position: absolute;
 }
 .whiskers.left1 {
-  top: 62%;
-  left: -5%;
+  top: 42%;
+  left: 5%;
   transform: rotate(-5deg);
 }
 .whiskers.left2 {
-  top: 72%;
-  left: -5%;
+  top: 52%;
+  left: 5%;
   transform: rotate(-8deg);
 }
 .whiskers.right1 {
-  top: 62%;
-  right: -5%;
+  top: 42%;
+  right: 5%;
   transform: rotate(5deg);
 }
 .whiskers.right2 {
-  top: 72%;
-  right: -5%;
+  top: 52%;
+  right: 5%;
   transform: rotate(8deg);
+}
+
+/* ear */
+.ear {
+  width: 280px;
+  height: 300px;
+  background-color: rgb(223, 212, 212);
+  clip-path: polygon(54% 0, 73% 11%, 86% 30%, 100% 100%, 4% 80%, 18% 32%, 32% 11%);
+  position: absolute;
+
+}
+.ear.left {
+  transform: rotate(-70deg);
+  /* transform: rotate(); */
+  left: 55%;
+}
+.ear.right {
+  transform: rotate(195deg);
+  top: -7%;
+  left: 7%;
 }
