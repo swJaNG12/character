@@ -7,7 +7,9 @@ body {
   margin: 0;
   height: 100vh;
   background: linear-gradient(-45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  /* transition: all .5s; */
 }
+
 
 
 .facebox {
@@ -198,9 +200,9 @@ body {
 }
 .facebox:hover .ear.left {
   transform: scale(1.05) rotate(175deg);
-}ß
+}
 .facebox:hover .ear.right {
-  transform: scale(1.05) rotate(-90deg);
+  transform: scale(1.05) rotate(280deg);
 }
 .facebox:hover .whiskers.left1 {
   bottom: 37%;
@@ -210,6 +212,8 @@ body {
   bottom: 26%;
   transform: rotate(349deg);
 }
+
+
 /* 그리고 뒤에서 후광 효과처럼 화 하고 빛이 번진다.
    이때 left 귀 모양은 right 처럼 내려가게 한다. left 수염도 right 처럼 슨다.
    그리고 face와 glasses temple, glasses에 있는 shadow가 없어진다.
