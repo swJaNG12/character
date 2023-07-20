@@ -43,6 +43,7 @@ body {
   box-shadow: 50px 30px 28px rgba(222, 184, 135, 0.25);
 }
 
+
 /* borws */
 .brows {
   background-color: black;
@@ -107,6 +108,7 @@ body {
   top: 30%;
 }
 
+
 .nose {
   width: 0;
   height: 0;
@@ -128,6 +130,7 @@ body {
   top: 57%;
   left: 283px;
 }
+
 
 /* mouse */
 .mouse {
@@ -176,6 +179,7 @@ body {
   right: 5%;
   transform: rotate(8deg);
 }
+
 
 /* ear */
 .ear {
@@ -236,6 +240,7 @@ body {
   left: -35%;
 }
 
+
 /* star */
 .star {
   opacity: 0;
@@ -243,7 +248,6 @@ body {
   top: 20%;
   right: 20%;
 }
-
 
 
 /* mouse hover */
@@ -303,6 +307,7 @@ body {
   animation-iteration-count: 1;
 }
 
+/* animation */
 @keyframes star {
   25% {
     opacity: .5;
