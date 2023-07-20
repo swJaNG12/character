@@ -198,47 +198,42 @@ body {
 
 
 /* 말풍선 */
-.bubble {
-  width: 400px;
+.bubble{
+  width: 300px;
   height: 100px;
   position: absolute;
   border: 10px solid transparent;
   border-radius: 20px;
   box-sizing: border-box;
-  /* box-shadow: inset 0 -10px 20px #000, inset 0 10px 20px #000, 0 -10px 20px #000, 0 10px 20px #000; */
   box-shadow: inset 0 -10px 15px rgb(185, 49, 189), inset 0 10px 15px rgb(185, 49, 189), 0 -10px 15px rgb(185, 49, 189), 0 10px 15px rgb(185, 49, 189);
-  font-size: 40px;
+  font-size: 30px;
   color: aqua;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
 }
 .bubble1 {
   top: 20%;
-  right: -50%;
-  opacity: 0;
+  right: -30%;
 }
 .bubble2 {
   top: 30%;
-  right: -50%;
-  opacity: 0;
+  right: -30%;
 }
 .bubble3 {
   top: 30%;
-  left: -50%;
-  opacity: 0;
+  left: -35%;
 }
 .bubble4 {
   width: 550px;
-  top: 40%;
-  right: -65%;
-  opacity: 0;
+  bottom: 10%;
+  right: -25%;
 }
 .bubble5 {
-  width: 470px;
+  width: 370px;
   top: 10%;
-  left: -55%;
-  opacity: 0;
+  left: -35%;
 }
 
 /* star */
@@ -246,8 +241,9 @@ body {
   opacity: 0;
   position: absolute;
   top: 20%;
-  right: 20%
+  right: 20%;
 }
+
 
 
 /* mouse hover */
@@ -357,15 +353,3 @@ body {
     opacity: 0;
   }
 }
-
-
-/* 그리고 뒤에서 후광 효과처럼 화 하고 빛이 번진다.
-   이때 left 귀 모양은 right 처럼 내려가게 한다. left 수염도 right 처럼 슨다.
-   그리고 face와 glasses temple, glasses에 있는 shadow가 없어진다.
-
-   scale이 살짝 커진다.
-
-   body에 준 그라데이션 기울기를 돌려서 붉은 부분이 위로 오고 파란 부분이 아래로 오게 만든다.
-*/
-/* 고양이 얼굴에 손을 가져다 대면 말풍선과 함께 "같이 츄르 먹을래?" 가 뜬다. */
-
